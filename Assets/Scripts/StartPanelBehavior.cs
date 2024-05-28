@@ -8,6 +8,7 @@ public class StartPanelBehavior : MonoBehaviour
     [SerializeField] private GameObject[] windows;
     public event Action ReadyToStart;
     private int isPlayed = 0;
+    public float waitTime = 5f;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class StartPanelBehavior : MonoBehaviour
         for (int i = 0; i < windows.Length; i++)
         {
             windows[i].SetActive(true);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(waitTime);
             windows[i].SetActive(false);
         }
         PlayerPrefs.SetInt("isPlayedInt", 1);

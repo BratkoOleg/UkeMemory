@@ -137,7 +137,7 @@ public class NoteRoller : MonoBehaviour
 
         yield return new WaitForSeconds(TimerBitweenRounds);
 
-        if(TimerBitweenRounds <= 3f)
+        if(TimerBitweenRounds < 3f)
             TimerBitweenRounds += 0.5f;
             
         AddNote();
