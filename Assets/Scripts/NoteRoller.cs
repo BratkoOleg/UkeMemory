@@ -11,7 +11,7 @@ public class NoteRoller : MonoBehaviour
     public event Action<float> RoundEnded;
     public event Action<bool> RoundStarted; 
     public event Action GotDamage; 
-    public event Action Failed; 
+    //public event Action Failed; 
     [SerializeField] private int Notenumber = 1;
     private int Rounds = 0;
     [SerializeField] private List<int> Notes;

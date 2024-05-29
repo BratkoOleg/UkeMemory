@@ -19,13 +19,13 @@ public class String : SoundManager
         image = gameObject.GetComponent<Image>();
         btn.onClick.AddListener(CheckNote);
         noteRoller.RoundStarted += ChangeFlag;
-        noteRoller.Failed += StartFail;
+        // noteRoller.Failed += StartFail;
     }
     void OnDisable()
     {
         btn.onClick.RemoveAllListeners();
         noteRoller.RoundStarted -= ChangeFlag;
-        noteRoller.Failed -= StartFail; 
+        // noteRoller.Failed -= StartFail; 
     }
 
     public void StartFail()
