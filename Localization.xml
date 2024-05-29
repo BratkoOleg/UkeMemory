@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Keys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Key Name="g_welcome">
+		<Translates>
+			<en-us>Welcome to Uke Memory!. At the beginning of the round, the strings are light up one by one, you need to remember this sequence. After the strings stop playing you need to click on them in the sequence you remember. With the correct sequence, a new round starts, but if you are wrong, the current round starts again.. After 3-rd mistakes the game is over . Enjoy! *press to continue*</en-us>
+			<ru>Добро пожаловать в игру Uke Memory!
+В начале раунда поочередно загораются струны, вам необходимо запомнить эту последовательность.
+После того как струны перестанут играть вам нужно нажимать на них в последовательности, которую вы запомнили.
+При правильной последовательности начинается новый раунд, но если вы ошибетесь, то текущий рануд начинается заново.
+У вас есть 3 права на ошибку.
+Приятной игры!
+*нажмите для продолжения*</ru>
+		</Translates>
+	</Key>
+	<Key Name="mm_MusicV">
+		<Translates>
+			<en-us>Music</en-us>
+			<ru>Музыка</ru>
+		</Translates>
+	</Key>
+	<Key Name="mm_NoteV">
+		<Translates>
+			<en-us>String</en-us>
+			<ru>Струны</ru>
+		</Translates>
+	</Key>
+	<Key>
+		<Translates/>
+	</Key>
+	<Key>
+		<Translates/>
+	</Key>
+	<Key>
+		<Translates/>
+	</Key>
+	<Key>
+		<Translates/>
+	</Key>
+	<Key>
+		<Translates/>
+	</Key>
+	<Key>
+		<Translates/>
+	</Key>
+	<Key>
+		<Translates/>
+	</Key>
+	<Key>
+		<Translates/>
+	</Key>
+	<Key>
+		<Translates/>
+	</Key>
+</Keys>

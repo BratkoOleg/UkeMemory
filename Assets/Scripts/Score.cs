@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    private Text score;
+    [SerializeField] private Text score;
     public Text    BestscoreTest;
     private int BestScore;
     [SerializeField] private NoteRoller noteRoller;
@@ -24,17 +24,16 @@ public class Score : MonoBehaviour
     void Start()
     {
         BestScore = LoadGame();
-        BestscoreTest.text = "Best: " + BestScore;
-        score = gameObject.GetComponent<Text>();
+        BestscoreTest.text = BestScore.ToString();
     }
 
     private void ChangeScore(int Score)
     {
-        score.text = "Score: " + Score;
+        score.text = Score.ToString();
         if(BestScore < Score)
         {
             SaveGame(Score);
-            BestscoreTest.text = "Best: " + Score;
+            BestscoreTest.text = Score.ToString();
         }
     }
 
