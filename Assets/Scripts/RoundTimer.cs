@@ -12,7 +12,7 @@ public class RoundTimer : MonoBehaviour
     private float maxTime;
     private bool isStart = false;
 
-    private void Start()
+    private void OnEnable()
     {
         noteRoller.RoundEnded += ShowProgressBar;
     }
@@ -38,6 +38,7 @@ public class RoundTimer : MonoBehaviour
 
     public void ShowProgressBar(float time)
     {
+        Debug.Log("check");
         _window.SetActive(true);
         maxTime = time;
         Deftime = maxTime;

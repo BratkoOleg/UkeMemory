@@ -9,6 +9,7 @@ public class Pause : MonoBehaviour
     [SerializeField] private Button restart;
     [SerializeField] private Button exit;
     [SerializeField] private Button pause;
+    [SerializeField] private GameObject faqBtn;
     [SerializeField] private GameObject window;
 
     void OnEnable()
@@ -44,5 +45,6 @@ public class Pause : MonoBehaviour
             Time.timeScale = 1;
 
         window.SetActive(!window.activeSelf);
+        faqBtn.SetActive(!faqBtn.activeSelf);
     }
 }

@@ -27,12 +27,12 @@ public class NoteRoller : MonoBehaviour
 
     private void OnEnable()
     {
-        startPanelBehavior.ReadyToStart += AddNote;
+        startPanelBehavior.ReadyToStart += StartTimer;
     }
 
     private void OnDisable()
     {
-        startPanelBehavior.ReadyToStart -= AddNote;
+        startPanelBehavior.ReadyToStart -= StartTimer;
     }
 
     void Start()
@@ -46,6 +46,13 @@ public class NoteRoller : MonoBehaviour
 
         // AddNote();
     }
+
+    private void StartTimer()
+    {
+        Debug.Log("check 1");
+        StartCoroutine(TimerForNextRound());
+    }
+
     private void AddNote()
     {
         Notes.Add(Convert.ToInt32(Objects[GetNumber()].name));
