@@ -11,19 +11,21 @@ public class NoteRoller : MonoBehaviour
     public event Action<float> RoundEnded;
     public event Action<bool> RoundStarted; 
     public event Action GotDamage; 
-    //public event Action Failed; 
+
     [SerializeField] private int Notenumber = 1;
-    private int Rounds = 0;
     [SerializeField] private List<int> Notes;
     [SerializeField] private GameObject[] Strings = new GameObject[4];
-    private Dictionary<int, GameObject> StringsDict = new Dictionary<int, GameObject>();
     [SerializeField] private float timeBtwnNotes = 2f;
     [SerializeField] private bool RoundIsReady = false;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] float[] percentrages;
     [SerializeField] GameObject[] Objects;
-    private float TimerBitweenRounds = 1f;
+
     public StartPanelBehavior startPanelBehavior;
+
+    private Dictionary<int, GameObject> StringsDict = new Dictionary<int, GameObject>();
+    private float TimerBitweenRounds = 1f;
+    private int Rounds = 0;
 
     private void OnEnable()
     {
@@ -37,19 +39,14 @@ public class NoteRoller : MonoBehaviour
 
     void Start()
     {
-
         StringsDict.Add(1,Strings[0]);
         StringsDict.Add(2,Strings[1]);
         StringsDict.Add(3,Strings[2]);
         StringsDict.Add(4,Strings[3]);
-
-
-        // AddNote();
     }
 
     private void StartTimer()
     {
-        Debug.Log("check 1");
         StartCoroutine(TimerForNextRound());
     }
 
@@ -58,11 +55,13 @@ public class NoteRoller : MonoBehaviour
         Notes.Add(Convert.ToInt32(Objects[GetNumber()].name));
         ShowArray();
     }
+
     public int GetNumber()
     {
         float random = Random.Range(0f,1f);
         float numForAdding = 0;
         float total = 0;
+        
         for (int i = 0; i < percentrages.Length; i++)
         {
             total += percentrages[i];

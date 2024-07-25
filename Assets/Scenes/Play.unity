@@ -2141,7 +2141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &570012473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2149,7 +2149,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570012472}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b17ca658443c5e0438208b044db3ac47, type: 3}
   m_Name: 
@@ -2169,6 +2169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   androidAdID: Interstitial_Android
   iOSAdID: Interstitial_iOS
+  adId: 
 --- !u!114 &570012475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,6 +2185,7 @@ MonoBehaviour:
   androidGameID: 5627523
   iOSGameID: 5627522
   testMode: 1
+  gameID: 
 --- !u!4 &570012476
 Transform:
   m_ObjectHideFlags: 0
